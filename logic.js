@@ -7,11 +7,7 @@
   
   var config = {
     apiKey: "AIzaSyCgeYILA7H2DTXOQJGrujsGc_d44u-Aj4E",
-    authDomain: "myfirebasemeet.firebaseapp.com",
-    databaseURL: "https://myfirebasemeet.firebaseio.com",
-    projectId: "myfirebasemeet",
-    storageBucket: "myfirebasemeet.appspot.com",
-    messagingSenderId: "674007746257"
+    
   };
   firebase.initializeApp(config);
 
