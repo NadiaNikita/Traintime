@@ -1,5 +1,5 @@
 
-
+// still working on this app in between group project, has some bugs that need fix 
 $(document).ready(function(){
 	// Firebase
 	// var trainData = new   !!!Firebase needs a firebase link
