@@ -1,7 +1,9 @@
 
+
 $(document).ready(function(){
 	// Firebase
 	// var trainData = new   !!!Firebase needs a firebase link
+	<script>
 	var trainData = {
 		apiKey: "AIzaSyCgeYILA7H2DTXOQJGrujsGc_d44u-Aj4E",
 		authDomain: "myfirebasemeet.firebaseapp.com",
@@ -10,7 +12,11 @@ $(document).ready(function(){
 		storageBucket: "myfirebasemeet.appspot.com",
 		messagingSenderId: "674007746257"
 	  };
+	  </script>
 	  firebase.initializeApp(config);
+	  
+	  
+
 	
 	//  function for adding a trian button//
 	$("#addTrainBtn").on("click", function(){
@@ -63,11 +69,11 @@ $(document).ready(function(){
 		console.log(childSnapshot.val());
 
 		// assign firebase var
-		var firebaseName = childSnapshot.val().name;
+		var firebaseName = childSnapshot.val().trainameText;
 		// var firebaseLine = childSnapshot.val().line;
-		var firebasewhereto = childSnapshot.val().destination;
-		var firebaseTrainTimeInput = childSnapshot.val().trainTime;
-		var firebaseFrequency = childSnapshot.val().frequency;
+		var firebasewhereto = childSnapshot.val().whereTo;
+		var firebaseTrainTimeInput = childSnapshot.val().trainTimes;
+		var firebaseFrequency = childSnapshot.val().occurenceofTrains;
 		
 		var diffTime = moment().diff(moment.unix(firebaseTrainTimeInput), "minutes");
 		var timeRemainder = moment().diff(moment.unix(firebaseTrainTimeInput), "minutes") % firebaseFrequency ;
@@ -91,9 +97,6 @@ $(document).ready(function(){
 
 	});
 });
-
-
-
 
   
  
